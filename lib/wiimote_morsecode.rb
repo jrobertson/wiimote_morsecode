@@ -9,9 +9,10 @@ class WiimoteMorseCode < WiimoteSps
 
 
   def initialize(device_id: 'wiimote', sps_address: nil, sps_port: 59000, 
-                  dash: :minus, dot: :plus)
+                  dash: :minus, dot: :plus, led_xor: true)
 
-    super(device_id: device_id, sps_address: sps_address, sps_port: 59000)
+    super(device_id: device_id, sps_address: sps_address, sps_port: 59000, 
+          led_xor: led_xor)
 
     @mc = ''
 
